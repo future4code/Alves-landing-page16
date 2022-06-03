@@ -1,0 +1,92 @@
+
+.logo{
+     width: 100px;
+     height: 100px;
+     float: left;
+     background: url(../Alves-landing-page16/imagens/logo.png)center center/100px no-repeat;
+     font-size: 0;
+       cursor: pointer;
+    }
+
+
+.header{
+    display: flex;
+    justify-content: space-between;
+    padding: 15px;
+    align-items: center;
+    flex-wrap: wrap;
+    background-color: rgb(176,196,222);
+    overflow: hidden;
+    width: 100%;
+    height: 80px;
+    
+    
+}
+.menu{
+    display: flex;
+}
+.menu li{
+    margin-left: 20px;
+
+}
+.menu li a{
+    
+    padding: 8px;
+    background-color:#000000;
+    justify-content: space-between;
+    color: rgb(99, 94, 94);
+}
+
+ul{
+    list-style:none; 
+
+}
+.menu .li{
+    text-decoration: none;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+}
+.containerindex{
+    border: 0px solid black;
+    max-width: 1280px ;
+    margin: 0 auto;
+    display: grid;
+    grid-gap: 20px;
+    grid-template-areas: 
+    " item item item"
+    " item item item"
+    " footer footer footer";
+    padding: 0px 20px 0px 20px;
+    justify-content: center;
+    
+     
+}
+img{
+    width: 100%;
+    border-radius: 20px;
+}
+
+
+.item{
+    max-width: 300px;
+    min-width: 200px;
+    height: 300px;
+    background-color: #333;
+    border-radius: 20px;
+    grid-area: "item";
+    
+    }
+    .footer{
+        width: auto;
+        height: 300px;
+        background-color: #333;
+        border-radius: 20px;
+        grid-area: "footer";
+        grid-column: footer;
+        }
+
+        
+        
+        
+        
+        
+    
