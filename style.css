@@ -4,7 +4,7 @@ body{
     height: auto;
     margin: 0;
     display: grid;
-    grid-template-rows: 100px 1fr 50px;
+    grid-template-rows: 100px 1fr 75px;
     row-gap: 2%;
 }
 /*will- defini tamanho do body e a margen */
@@ -136,10 +136,6 @@ display: none;
     display: flex;
     
 }
-#toggle:checked+body{
-    background-color: red;
-}
-
 
 
 .menu-itens{
@@ -189,8 +185,9 @@ ul{
     font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;} */
 
 .containerindex{
-    width: 100%;
+    width: 83%;
     height: 100%;
+
     border: 0px solid black;
     margin: 0 auto;
     display: grid;
@@ -201,33 +198,72 @@ ul{
     justify-content: space-around;
     align-items: center;
     justify-items: center;
+    align-content: center;
     
      
 }
 img{
     width: 100%;
     border-radius: 20px;
+    height: 80%;
+   
 }
 
 
 .item{
-    max-width: 300px;
-    min-width: 200px;
-    height: 100%;
+   height: 90%;
+    width:  90%;
+    
     background-color: #333;
     border-radius: 20px;
     grid-area: "item";
     
     }
     footer{
-        width: 100%;
+        width: 100vw;
         height: 100%;
-        background-color: #333;
+        background-color: rgb(176,196,222);
+        display: grid;
+        grid-template-columns: 33% 33% 34%;;
+        text-align: center;
+        justify-items: center
+  
         
-        }
+    }
+    .midiasSociais{
+        height:100%;
+        width: 200px;
+       display: flex;
+       align-items: center;
+    justify-content: space-around;
 
+    }
+    .midiasSociais img{
+        height: 100%;
+        width: 80%;
         
-        
+    }
+    footer p {
+            font-size: 1.5em;
+            height: 100%;
+            width: 100%;
+            margin: 0;
+            margin-block-start: 0;
+            margin-block-end: 0;
+            display: flex;
+            align-items: center;
+            justify-content: center
+            
+        }
+        footer h6{
+            font-size: 3rem;
+            margin: 0;
+            text-shadow: 4px 3px 3px #333;
+            font-style: italic;
+            height: 100%;
+            width: 100%;
+
+        }
         
         
         
