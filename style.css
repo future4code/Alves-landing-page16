@@ -201,7 +201,7 @@ ul{
 .containerindex {
     width: 83%;
     height: 100%;
-
+    padding-bottom: ;
     border: 0px solid black;
     margin: 0 auto;
     display: grid;
@@ -228,21 +228,20 @@ img {
 .item {
     height: 90%;
     width: 90%;
-
     background-color: #333;
     border-radius: 20px;
     grid-area: "item";
-
+    color: white;
 }
 
 footer {
-    width: 100vw;
-    height: 100%;
-    min-width: 600px;
+    /*(Robinaldo) coloquei o footer fixo no final da page*/
+    position: fixed;
+    bottom: 0;
+    width: 100%;
     background-color: rgb(176, 196, 222);
     display: grid;
     grid-template-columns: 33% 33% 34%;
-    ;
     text-align: center;
     justify-items: center
 }
@@ -284,6 +283,7 @@ footer h6 {
 
 }
 
+
 /* Daqui para baixo podem editar as paginas  */
 
 .container-job {
@@ -297,15 +297,69 @@ footer h6 {
     height: 67vh;
     background-color: aqua
 }
+/*Area do Formulário*/
 
-.container-promocoes {
-    width: 100vw;
-    height: 67vh;
-    background-color: aqua
+.local-form{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+.form input{
+    margin-top: 0.5rem;
+    height: 2rem;
+    outline: none;
+    padding-left: 10px;
+}
+.form form{
+    display: flex;
+    flex-direction: column;
+    height: 32vh;
+    width: 50vw;
+}
+input::placeholder{
+    color: black;
+    text-transform: uppercase;
+}
+input[type="submit"]{
+    background-color: rgb(176, 196, 222);
+    text-transform: uppercase;
+    font-weight: 600;
+    cursor: pointer;
+}
+h2{
+    text-shadow: 3px 3px 3px rgb(176, 196, 222);
+    font-size: 2.2rem;
+    text-align: center;
+    width: 100%;
+    margin: 0.2em;
 }
 
 .container-quemsomos {
     width: 100vw;
     height: 67vh;
     background-color: aqua
+}
+/* responsividade*/
+@media screen and (min-width: 320px) and (max-width: 480px){
+    .containerindex{
+        display:flex;
+        flex-direction: column;
+        padding-bottom: 130px;
+    }
+    .item{
+        width: 85%;
+    }
+    footer > h6{
+        display: none;
+        }
+    footer> p{
+        text-align: start;
+        font-size: medium;
+    }
+    footer{
+        display: flex;
+        justify-content: end;
+        align-items: center;
+    }
 }
