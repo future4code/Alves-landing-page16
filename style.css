@@ -361,7 +361,8 @@ h2 {
 .container-quemsomos {
     width: 100vw;
     height: 67vh;
-    background-color: aqua
+    width: 90vw;
+    
 }
 
 /* responsividade*/
