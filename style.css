@@ -1,92 +1,393 @@
+body {
+    width: 100vw;
+    max-width: 100vw;
+    height: auto;
+    margin: 0;
+    display: grid;
+    grid-template-rows: 100px 1fr 75px;
+    row-gap: 2%;
+}
 
-.logo{
-     width: 100px;
-     height: 100px;
-     float: left;
-     background: url(../Alves-landing-page16/imagens/logo.png)center center/100px no-repeat;
-     font-size: 0;
-       cursor: pointer;
-    }
+/*will- defini tamanho do body e a margen */
 
 
-.header{
+.header {
     display: flex;
     justify-content: space-between;
-    padding: 15px;
     align-items: center;
     flex-wrap: wrap;
-    background-color: rgb(176,196,222);
+    background-color: rgb(176, 196, 222);
     overflow: hidden;
     width: 100%;
-    height: 80px;
-    
-    
+    height: 100%;
+    margin-bottom: 2%;
 }
-.menu{
+
+/*will-
+ mudei o tamanho do height para uma unidade relativa
+tirei o padding
+ */
+
+.logo {
+    width: 125px;
+    height: 125px;
+    float: left;
+
+    font-size: 0;
+    cursor: pointer;
+}
+
+header h6 {
+    font-size: 3rem;
+    margin: 0;
+    text-shadow: 4px 3px 3px #333;
+    font-style: italic;
+}
+
+/* Tudos os menos checkbox são referentes a checkbox e a nav */
+.checkbox-conteiner {
+    width: 50px;
+    height: 50px;
+    margin-right: 5%;
+
+
+}
+
+.checkbox-conteiner input {
+    display: none;
+
+}
+
+.checkbox {
+    cursor: pointer;
+    border: solid 1px black;
+    border-radius: 20%;
     display: flex;
-}
-.menu li{
-    margin-left: 20px;
-
-}
-.menu li a{
-    
-    padding: 8px;
-    background-color:#000000;
-    justify-content: space-between;
-    color: rgb(99, 94, 94);
-}
-
-ul{
-    list-style:none; 
-
-}
-.menu .li{
-    text-decoration: none;
-    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
-}
-.containerindex{
-    border: 0px solid black;
-    max-width: 1280px ;
-    margin: 0 auto;
+    width: 50px;
+    height: 50px;
+    top: 27px;
+    right: 12px;
+    background-color: white;
     display: grid;
-    grid-gap: 20px;
-    grid-template-areas: 
-    " item item item"
-    " item item item"
-    " footer footer footer";
-    padding: 0px 20px 0px 20px;
+    grid-template-rows: 20% 20% 20%;
+    transition: 0.4s ease-in-out;
+    justify-items: center;
+    align-items: center;
+    align-content: center;
+    margin-left: 25%;
+    position: absolute;
+    z-index: 9999;
+
+
+
+}
+
+
+.checkbox .trace {
+    width: 60%;
+    height: 2px;
+    background-color: black;
+    border-radius: 4px;
+    transition: 0.5s ease-in-out;
+
+}
+
+.menu {
+    display: none;
+    position: absolute;
+    top: 125%;
+    left: -334%;
+    background-color: white;
+    width: 228px;
+    height: 254px;
+    border-radius: 20px;
+    border: 1px solid black;
+    z-index: 1
+}
+
+
+#toggle:checked+.checkbox {
+    display: flex;
+    background-color: rgb(180, 171, 171);
+    flex-direction: column;
     justify-content: center;
+
+
+}
+
+#toggle:checked+.checkbox .trace:nth-child(1) {
+    transform: rotate(45deg);
+    margin: -4%;
+    width: 80%;
+
+
+}
+
+#toggle:checked+.checkbox .trace:nth-child(2) {
+    transform: translate(-100px);
+    width: 30px;
+    visibility: hidden;
+    opacity: 0;
+    margin: 0;
+
+}
+
+#toggle:checked+.checkbox .trace:nth-child(3) {
+    transform: rotate(-45deg);
+    margin: -2%;
+    width: 80%;
+
+}
+
+
+
+
+
+#toggle:checked+.checkbox .menu {
+    display: flex;
+
+}
+
+
+.menu-itens {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    text-align: center;
+
+
+
+}
+
+.menu-itens a {
+
+    width: 100%;
+    height: 100%;
+    border-bottom: 1px solid black;
+    font-size: 25px;
+    margin-top: 25px;
+
+}
+
+#borda {
+    border-bottom: 0;
+}
+
+
+.containerindex {
+    width: 100vw;
+    height: 376px;
+    display: grid; 
+    grid-template-columns: 70% 30%;
+    grid-template-rows: 376px;
+    justify-items: center;
+    background-color: rgb(202, 204, 206);
     
      
 }
-img{
+.area1{
+   
+    height: 376px;
+    max-height: 67vh;
+}
+.area2{
+    height: 376px;
+    max-height: 67vh;
+}
+.area1 img{
+    width: 90%;
+    height: 100%;
+    max-height: 50%;
+}
+.containerindex h2{
+    width: 90%;
+    height: auto;
+    background-color: #333;
+}
+.area2 img{
+    width: 90%;
+    height: 82px
+}
+.area2 p{
+    flex-direction: column;
+    margin: 0;
+    width: 100%;
+    margin: 0;
+    height: 36%;
+    text-align: center;
+    display: flex;
+}
+img {
     width: 100%;
     border-radius: 20px;
+    height: 80%;
+
 }
 
 
-.item{
-    max-width: 300px;
-    min-width: 200px;
-    height: 300px;
+.item {
+    height: 90%;
+    width: 90%;
     background-color: #333;
     border-radius: 20px;
     grid-area: "item";
-    
-    }
-    .footer{
-        width: auto;
-        height: 300px;
-        background-color: #333;
-        border-radius: 20px;
-        grid-area: "footer";
-        grid-column: footer;
-        }
+    color: white;
+}
 
-        
-        
-        
-        
-        
-    
+footer {
+    /*(Robinaldo) coloquei o footer fixo no final da page*/
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    background-color: rgb(176, 196, 222);
+    display: grid;
+    grid-template-columns: 33% 33% 34%;
+    text-align: center;
+    justify-items: center
+}
+
+.midiasSociais {
+    height: 100%;
+    width: 200px;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+
+}
+
+.midiasSociais img {
+    height: 100%;
+    width: 80%;
+
+}
+
+footer p {
+    font-size: 1.5em;
+    height: 100%;
+    width: 100%;
+    margin: 0;
+    margin-block-start: 0;
+    margin-block-end: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center
+}
+
+footer h6 {
+    font-size: 3rem;
+    margin: 0;
+    text-shadow: 4px 3px 3px #333;
+    font-style: italic;
+    height: 100%;
+    width: 100%;
+
+}
+
+
+/* Daqui para baixo podem editar as paginas  */
+
+.container-job {
+    width: 100vw;
+    height: 67vh;
+    background-color: aqua
+}
+
+.container-produtos {
+    width: 83%;
+    height: 100%;
+    padding-bottom: ;
+    border: 0px solid black;
+    margin: 0 auto;
+    display: grid;
+    grid-gap: 2%;
+    grid-template-areas:
+        " item item item"
+        " item item item";
+    justify-content: space-around;
+    align-items: center;
+    justify-items: center;
+    align-content: center;
+
+
+}
+
+
+/*Area do Formulário*/
+
+.local-form {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.form input {
+    margin-top: 0.5rem;
+    height: 2rem;
+    outline: none;
+    padding-left: 10px;
+}
+
+.form form {
+    display: flex;
+    flex-direction: column;
+    height: 32vh;
+    width: 50vw;
+}
+
+input::placeholder {
+    color: black;
+    text-transform: uppercase;
+}
+
+input[type="submit"] {
+    background-color: rgb(176, 196, 222);
+    text-transform: uppercase;
+    font-weight: 600;
+    cursor: pointer;
+}
+
+h2 {
+    text-shadow: 3px 3px 3px rgb(176, 196, 222);
+    font-size: 2.2rem;
+    text-align: center;
+    width: 100%;
+    margin: 0.2em;
+}
+
+.container-quemsomos {
+    width: 100vw;
+    height: 67vh;
+    background-color: aqua
+}
+
+/* responsividade*/
+@media screen and (min-width: 320px) and (max-width: 480px) {
+    .containerindex {
+        display: flex;
+        flex-direction: column;
+        padding-bottom: 130px;
+    }
+
+    .item {
+        width: 85%;
+    }
+
+    footer>h6 {
+        display: none;
+    }
+
+    footer>p {
+        text-align: start;
+        font-size: medium;
+    }
+
+    footer {
+        display: flex;
+        justify-content: end;
+        align-items: center;
+    }
+}
